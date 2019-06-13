@@ -53,7 +53,7 @@ function showPrivateInfo(user) {
   hiddenPrivateInfo.style.display = 'block';
   hiddenPrivateInfo.innerHTML = `
     <p>Esto <b>SI</b> es información confidencial </p>
-    <button id="btnLogout" class="button">Logout</button>
+    <button id="btnLogout" class="waves-effect waves-light btn" >Cerrar Sesion  <i class="material-icons right">send</i></button>
   `;
 
   const btnLogout = document.getElementById('btnLogout');
@@ -120,6 +120,8 @@ function alertTryAgain(error) {
 
 //fin de login
   
+
+// crud
   // Initialize Cloud Firestore through Firebase
   var db = firebase.firestore();
   var nombre = document.getElementById("nombre").value;
@@ -161,3 +163,4 @@ function alertTryAgain(error) {
         });
     });
 }
+//fin de crud
