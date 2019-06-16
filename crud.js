@@ -63,7 +63,8 @@ function verJuegos(){
                 <td>${doc.data().descri}</td>
                 <td>${doc.data().nombre}</td>
                 <td>${doc.data().plataforma}</td>
-            </tr> `
+            </tr> 
+            `
         });
     });
 }
