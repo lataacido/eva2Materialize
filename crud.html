@@ -1,28 +1,29 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CEEGamer</title>
 
   <!-- CSS  -->
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
+
 <body>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">CEEGamer</a>
+      <a id="logo-container" href="index.html" class="brand-logo">CEEGamer</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="login.html">Loggin</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="login.html">Loggin</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
@@ -42,47 +43,40 @@
     <div class="parallax"><img src="mural.jpg" alt="Unsplashed background img 1"></div>
   </div>
 
-
   <div class="container">
     <div class="section">
-        <div class="row center">
-            <div class="col s12 m4 ">
-                <div class="col s12 m4 ">
+      <div class="row center">
+        <div class="col s12 m4 ">
+          <div class="col s12 m4 ">
+            <div class="container-fluid" id="listado">
+              <h2>Listado de juegos</h2>
+              <table class="striped">
+                <thead>
+                  <tr>
+                    <th>Costo</th>
+                    <th>Descripcion</th>
+                    <th>Nombre</th>
+                    <th>Plataforma</th>
+                  </tr>
+                </thead>
+                <tbody id="tabla">
+                </tbody>
+              </table>
+            </div>
+          </div>
 
-                    <div class="container-fluid" id="listado">
-                        <h2>Listado de juegos</h2>
-                        <table class="striped">
-                          <thead>
-                            <tr>
-                                <th>Costo</th>
-                                <th>Descripcion</th>
-                                <th>Nombre</th>
-                                <th>Plataforma</th>
-                            </tr>
-                          </thead>
-                  
-                          <tbody id="tabla">
-                            
-                          </tbody>
-                        </table>
-                    </div>
-                </div>
+          <!--ejemplo 1-->
+          <input type="text" name="nombre" id="nombre"><br>
+          <input type="text" name="apellido" id="apellido"><br>
+          <input type="text" name="edad" id="edad"><br>
+          <button onclick="agregarDatos()">Agregar datos</button>
 
+          <!--ejemplo 2-->
+          <button onclick="eliDatos()">borrar</button>
 
-
-               <!--ejemplo 1-->
-    <input type="text" name="nombre" id="nombre"><br>
-    <input type="text" name="apellido" id="apellido"><br>
-    <input type="text" name="edad" id="edad" ><br>
-    <button onclick="agregarDatos()">Agregar datos</button>
-
-
-    <!--ejemplo 2-->
-    <button onclick="eliDatos()">borrar</button>
-
-    <!--ejemplo 2-->
-    <button onclick="verDatos()">ver datos</button>
-            </div>  
+          <!--ejemplo 2-->
+          <button onclick="verDatos()">ver datos</button>
+        </div>
       </div>
     </div>
   </div>
@@ -91,9 +85,6 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
-  </body>
-</html>
-
   <script src="crud.js"></script>
 </body>
 </html>
