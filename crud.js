@@ -56,9 +56,9 @@ function verJuegos(){
         tabla.innerHTML = '';
         querySnapshot.forEach(function(doc) {
             // doc.data() is never undefined for query doc snapshots
-            console.log(doc.data().costo, " => ", doc.data().descri + "-" + doc.data().nombre + "-" + doc.data().plataforma);
+            console.log(doc.id, " => ",doc.data().costo+" - "+ doc.data().descri + "-" + doc.data().nombre + "-" + doc.data().plataforma);
             tabla.innerHTML +=  `
-            tr>
+            <tr>
                 <th scope="row">${doc.data().costo}</th>
                 <td>${doc.data().descri}</td>
                 <td>${doc.data().nombre}</td>
