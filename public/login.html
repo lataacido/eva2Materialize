@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CEEGamer</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="index.html" class="brand-logo">CEEGamer</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="login.html">Loggin</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="login.html">Loggin</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light"></h5>
+        </div>
+        <br><br>
+      </div>
+    </div>
+    <div class="parallax"><img src="mural.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+  <div class="row center">
+    <div class="container">
+      <div class="section">
+        <div class="col s12 m4 ">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <section class="appInfo">
+            <article class="privateInfo">
+              <h2 class="privateInfo-title"></h2>
+
+              <div id="loginFormUI" class="form-container">
+                <p>Inicia sesión</p>
+
+                <form class="loginForm" name="loginForm">
+
+                  <div class="input-field ">
+
+                    <input id="email" class="validate" class="input" type="email" name="email"
+                      placeholder="Correo Electronico" required />
+                    <label for="email" data-error="wrong" data-success="right"></label>
+                  </div>
+                  <div class="input-field ">
+                    <input class="input" type="password" name="password" placeholder="Contraseña" required />
+                  </div>
+                  <div class="form-radioContainer" style="visibility:hidden;">
+                    <p>
+                      <label>
+                        <input type="radio" name="isLoginOrSignup" id="radioIsLogin" value="isLogin" checked />
+                        <span>Login</span>
+                      </label>
+                    </p>
+                    <p>
+                      <input type="radio" name="isLoginOrSignup" id="radioIsSignup" value="isSignup" />
+                      <span>SignUp</span>
+                    </p>
+                  </div>
+
+                  <div class="row center">
+                    <button id="btnLogin" class="waves-effect waves-light btn">Iniciar sesión<i
+                        class="material-icons right">send</i></button>
+                  </div>
+
+                </form>
+
+
+              </div>
+              <div id="hiddenPrivateInfo">
+                <p class="loading">Cargando...</p>
+              </div>
+            </article>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+</body>
+
+</html>
+<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+<script src="conexion.js"></script>
+</body>
+
+</html>
