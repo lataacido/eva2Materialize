@@ -55,3 +55,13 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
+.container-juegos{
+  background-color: #26a69a;
+}
+
+.contenedor-juegos{
+  width: 50%;
+  border: 2px black solid;
+  margin-left: 25%;
+}
