@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CEEGamer</title>
+
+  <!-- CSS  -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="index.html" class="brand-logo">CEEGamer</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="login.html">Loggin</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="login.html">Loggin</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <div class="row center">
+          <h5 class="header col s12 light"></h5>
+        </div>
+        <br><br>
+      </div>
+    </div>
+    <div class="parallax"><img src="mural.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+  <div class="container-juegos">
+    <div class="section">
+      <!--Cata-->
+      <div class="row center">
+        <div class="contenedor-juegos ">
+          <div id="listado">
+            <h2 class="titulo-listado">Listado de juegos</h2>
+            <table class="striped">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Descripcion</th>
+                  <th>Costo</th>
+                  <th>Plataforma</th>
+                </tr>
+              </thead>
+              <tbody id="tabla">
+              </tbody>
+            </table>
+          </div>
+          <button onclick="verJuegos()">Ver Juegos</button>
+        </div>
+      </div>
+
+      <!--Terro-->
+      <div class="row center">
+        <div class="contenedor-juegos ">
+          <div class="row s6">
+            <h2 class="titulo-listado">Agregar Juegos</h2>
+            <input type="text" name="nombre" id="nombre"><br>
+            <input type="text" name="plataforma" id="plataforma"><br>
+            <input type="text" name="costo" id="costo"><br>
+            <textarea rows="4" cols="50" name="descri" id="descri"></textarea><br>
+            <button onclick="agregarDatos()">Agregar Juego</button>
+          </div>
+        </div>
+      </div>
+
+      <!--Edgard-->
+      <div class="row center">
+        <div class="contenedor-juegos ">
+          <div class="row s6">
+            <h2 class="titulo-listado">Eliminar Juegos</h2>
+
+            <button onclick="eliDatos()">Eliminar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row center">
+        <div class="contenedor-juegos ">
+          <div class="row s6">
+            <h2 class="titulo-listado">Modificar Juegos</h2>
+
+            <button onclick="modiDatos()">Modificar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="crud.js"></script>
+</body>
+</html>
