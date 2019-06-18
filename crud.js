@@ -45,7 +45,7 @@ db.collection("usuarios").doc("7v3D7Z5o9p3u0uMkOeJr").delete().then(function() {
 var tabla = document.getElementById('tabla');
 function verJuegos(){
     db.collection("juegos").get().then(function(querySnapshot) {
-        //tabla.innerHTML = '';
+        tabla.innerHTML = '';
         querySnapshot.forEach(function(doc) {
             // doc.data() is never undefined for query doc snapshots
             console.log(doc.id, " => ",doc.data().costo+" - "+ doc.data().descri + "-" + doc.data().nombre + "-" + doc.data().plataforma);
