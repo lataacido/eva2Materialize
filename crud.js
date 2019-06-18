@@ -49,7 +49,7 @@ db.collection("usuarios").get().then(function(querySnapshot) {
 }
 
 
-//mostrar juegos
+//mostrar juegos hecho por cata
 var tabla = document.getElementById('tabla');
 function verJuegos(){
     db.collection("juegos").get().then(function(querySnapshot) {
