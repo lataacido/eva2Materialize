@@ -68,6 +68,10 @@ function verJuegos(){
         });
     });
 }
+//para hacer la funcion autoejecutable
+//(function{
+//}
+//)();
 //fin de crud
 
 
@@ -77,7 +81,7 @@ $(document).ready(function()
  {
     // Inicializar la base de datos
     var config = {
-      apiKey: "AIzaSyDGcEqhdJ_U6csAQTQLlxg0x3Ks3TCEhzo",
+    apiKey: "AIzaSyDGcEqhdJ_U6csAQTQLlxg0x3Ks3TCEhzo",
     authDomain: "conexione-5bb09.firebaseapp.com",
     projectId: "conexione-5bb09"
     };
@@ -90,15 +94,6 @@ $(document).ready(function()
     var referencia=database.ref("juegos");
 
     var juegos={};
-
-    /*
-    Evento: value
-
-    The value event is used to read a static snapshot of the contents at a given database path,
-    as they existed at the time of the read event. It is triggered once with the initial data and again every time the data changes.
-    The event callback is passed a snapshot containing all data at that location, including child data. In our code example above,
-    value returned all of the blog posts in our app. Everytime a new blog post is added, the callback function will return all of the posts.
-    */
 
     referencia.on('value',function(datos)
     {
