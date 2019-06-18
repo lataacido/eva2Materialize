@@ -11,15 +11,17 @@ firebase.initializeApp({
   // Initialize Cloud Firestore through Firebase
 var db = firebase.firestore();
 var nombre = document.getElementById("nombre").value;
-var apellido = document.getElementById("apellido").value;
-var edad= document.getElementById("edad").value;
+var plataforma = document.getElementById("plataforma").value;
+var costo= document.getElementById("costo").value;
+var descri= document.getElementById("descri").value;
 
 function agregarDatos(){
 
-db.collection("usuarios").add({
-    first: nombre,
-    last: apellido,
-    born: edad
+db.collection("juegos").add({
+    nombre: nombre,
+    plataforma: plataforma,
+    costo: costo ,
+    descri: descri
 
 })
 .then(function(docRef) {
@@ -39,21 +41,11 @@ db.collection("usuarios").doc("7v3D7Z5o9p3u0uMkOeJr").delete().then(function() {
 }
 
 
-function verDatos(){
-db.collection("usuarios").get().then(function(querySnapshot) {
-    querySnapshot.forEach(function(doc) {
-        // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id, " => ", doc.data().first + "-" + doc.data().last + "-" + doc.data().born);
-    });
-});
-}
-
-
-//mostrar juegos
+//mostrar juegos CATALINA
 var tabla = document.getElementById('tabla');
 function verJuegos(){
     db.collection("juegos").get().then(function(querySnapshot) {
-        tabla.innerHTML = '';
+        //tabla.innerHTML = '';
         querySnapshot.forEach(function(doc) {
             // doc.data() is never undefined for query doc snapshots
             console.log(doc.id, " => ",doc.data().costo+" - "+ doc.data().descri + "-" + doc.data().nombre + "-" + doc.data().plataforma);
@@ -68,6 +60,7 @@ function verJuegos(){
         });
     });
 }
+<<<<<<< HEAD
 //para hacer la funcion autoejecutable
 //(function{
 //}
@@ -89,12 +82,13 @@ $(document).ready(function()
     firebase.initializeApp(config);
 
     var database = firebase.database();
+=======
+>>>>>>> 811ff3b8074d751e7ae93d9a66886e41645b9ed0
 
-    // Fijarse que la ruta de partida ahora es la colección juegos:
-    var referencia=database.ref("juegos");
 
-    var juegos={};
+(function (){
 
+<<<<<<< HEAD
     referencia.on('value',function(datos)
     {
         juegos=datos.val();
@@ -133,5 +127,9 @@ $(document).ready(function()
     },function(objetoError){
         console.log('Error de lectura:'+objetoError.code);
     });
+=======
+    
+})();
+//fin de crud
+>>>>>>> 811ff3b8074d751e7ae93d9a66886e41645b9ed0
 
-});
