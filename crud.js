@@ -59,18 +59,4 @@ function verJuegos(){
             `
         });
     });
-}
-<<<<<<< HEAD
-//fin de crud
-=======
-
-
-/*
-(function (){
-    
-})();
-*/
-
-//fin de crud
-
->>>>>>> d01aed3445b9c10f749d538dcc30ce80b080b366
+};
