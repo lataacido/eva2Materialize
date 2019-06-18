@@ -33,6 +33,7 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
+        <h1 class="header center teal-text text-lighten-2">CEEGamer</h1>
         <div class="row center">
           <h5 class="header col s12 light"></h5>
         </div>
@@ -42,18 +43,19 @@
     <div class="parallax"><img src="mural.jpg" alt="Unsplashed background img 1"></div>
   </div>
 
-  <div class="container-juegos">
+  <div class="container">
     <div class="section">
       <div class="row center">
-        <div class="contenedor-juegos ">
-            <div  id="listado">
-              <h2 class="titulo-listado">Listado de juegos</h2>
+        <div class="col s12 m4 ">
+          <div class="col s12 m4 ">
+            <div class="container-fluid" id="listado">
+              <h2>Listado de juegos</h2>
               <table class="striped">
                 <thead>
                   <tr>
-                    <th>Nombre</th>
-                    <th>Descripcion</th>
                     <th>Costo</th>
+                    <th>Descripcion</th>
+                    <th>Nombre</th>
                     <th>Plataforma</th>
                   </tr>
                 </thead>
@@ -61,7 +63,8 @@
                 </tbody>
               </table>
             </div>
-            
+          </div>
+
           <!--ejemplo 1-->
           <input type="text" name="nombre" id="nombre"><br>
           <input type="text" name="apellido" id="apellido"><br>
@@ -72,7 +75,7 @@
           <button onclick="eliDatos()">borrar</button>
 
           <!--ejemplo 2-->
-          <button onclick="verJuegos()">ver datos</button>
+          <button onclick="verDatos()">ver datos</button>
         </div>
       </div>
     </div>
