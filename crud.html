@@ -47,42 +47,60 @@
       <!--Cata-->
       <div class="row center">
         <div class="contenedor-juegos ">
-            <div  id="listado">
-              <h2 class="titulo-listado">Listado de juegos</h2>
-              <table class="striped">
-                <thead>
-                  <tr>
-                    <th>Nombre</th>
-                    <th>Descripcion</th>
-                    <th>Costo</th>
-                    <th>Plataforma</th>
-                  </tr>
-                </thead>
-                <tbody id="tabla">
-                </tbody>
-              </table>
-            </div>
-            <button onclick="verJuegos()">ver datos</button>
+          <div id="listado">
+            <h2 class="titulo-listado">Listado de juegos</h2>
+            <table class="striped">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Descripcion</th>
+                  <th>Costo</th>
+                  <th>Plataforma</th>
+                </tr>
+              </thead>
+              <tbody id="tabla">
+              </tbody>
+            </table>
+          </div>
+          <button onclick="verJuegos()">Ver Juegos</button>
         </div>
       </div>
-      <!--Cata fin-->
 
       <!--Terro-->
-     
+      <div class="row center">
+        <div class="contenedor-juegos ">
           <div class="row s6">
-              <h2 class="titulo-listado">Agregar Juegos</h2>
-      
-        <input type="text" name="nombre" id="nombre"><br>
-        <input type="text" name="plataforma" id="plataforma"><br>
-        <input type="text" name="costo" id="costo"><br>
-        <textarea rows="4" cols="50"name="descri" id="descri">
-        </textarea><br>
-        <button onclick="agregarDatos()">Agregar datos</button>
-
-        <!--ejemplo 2-->
-        <button onclick="eliDatos()">borrar</button>
-
+            <h2 class="titulo-listado">Agregar Juegos</h2>
+            <input type="text" name="nombre" id="nombre"><br>
+            <input type="text" name="plataforma" id="plataforma"><br>
+            <input type="text" name="costo" id="costo"><br>
+            <textarea rows="4" cols="50" name="descri" id="descri"></textarea><br>
+            <button onclick="agregarDatos()">Agregar Juego</button>
+          </div>
+        </div>
       </div>
+
+      <!--Edgard-->
+      <div class="row center">
+        <div class="contenedor-juegos ">
+          <div class="row s6">
+            <h2 class="titulo-listado">Eliminar Juegos</h2>
+
+            <button onclick="eliDatos()">Eliminar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row center">
+        <div class="contenedor-juegos ">
+          <div class="row s6">
+            <h2 class="titulo-listado">Modificar Juegos</h2>
+
+            <button onclick="modiDatos()">Modificar</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!--  Scripts-->

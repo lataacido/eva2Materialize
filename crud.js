@@ -1,28 +1,24 @@
-
 firebase.initializeApp({
     apiKey: "AIzaSyDGcEqhdJ_U6csAQTQLlxg0x3Ks3TCEhzo",
     authDomain: "conexione-5bb09.firebaseapp.com",
     projectId: "conexione-5bb09"
+});  
 
-});
-  
-
-// crud
-  // Initialize Cloud Firestore through Firebase
+// CRUD
+// Initialize Cloud Firestore through Firebase
 var db = firebase.firestore();
 var nombre = document.getElementById("nombre").value;
 var plataforma = document.getElementById("plataforma").value;
 var costo= document.getElementById("costo").value;
 var descri= document.getElementById("descri").value;
 
+//terro
 function agregarDatos(){
-
 db.collection("juegos").add({
     nombre: nombre,
     plataforma: plataforma,
     costo: costo ,
     descri: descri
-
 })
 .then(function(docRef) {
     console.log("Document written with ID: ", docRef.id);
@@ -32,6 +28,7 @@ db.collection("juegos").add({
 });
 }
 
+//edgard
 function eliDatos(){
 db.collection("usuarios").doc("7v3D7Z5o9p3u0uMkOeJr").delete().then(function() {
     console.log("Document successfully deleted!");
@@ -40,8 +37,11 @@ db.collection("usuarios").doc("7v3D7Z5o9p3u0uMkOeJr").delete().then(function() {
 });
 }
 
+function modiDatos(){
+    
+}
 
-//mostrar juegos CATALINA
+//cata
 var tabla = document.getElementById('tabla');
 function verJuegos(){
     db.collection("juegos").get().then(function(querySnapshot) {
@@ -60,8 +60,4 @@ function verJuegos(){
         });
     });
 }
-
-
-
 //fin de crud
-
