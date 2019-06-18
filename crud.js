@@ -60,76 +60,13 @@ function verJuegos(){
         });
     });
 }
-<<<<<<< HEAD
-//para hacer la funcion autoejecutable
-//(function{
-//}
-//)();
-//fin de crud
 
 
-//listado
-
-$(document).ready(function()
- {
-    // Inicializar la base de datos
-    var config = {
-    apiKey: "AIzaSyDGcEqhdJ_U6csAQTQLlxg0x3Ks3TCEhzo",
-    authDomain: "conexione-5bb09.firebaseapp.com",
-    projectId: "conexione-5bb09"
-    };
-
-    firebase.initializeApp(config);
-
-    var database = firebase.database();
-=======
->>>>>>> 811ff3b8074d751e7ae93d9a66886e41645b9ed0
-
-
+/*
 (function (){
-
-<<<<<<< HEAD
-    referencia.on('value',function(datos)
-    {
-        juegos=datos.val();
-
-        // Recorremos los juegos y los mostramos
-        $.each(juegos, function(indice,valor)
-        {
-            var prevProducto='<div class="row"><div class="col-md-3 cabeceraProducto">';
-
-            prevProducto+='<h2>'+valor.nombre+'</h2></div>';
-
-            prevProducto+='<div class="row"><div class="col-md-3 cabeceraProducto">';
-            prevProducto+='<h2>'+valor.costo+'€. </h2></div>';
-            prevProducto+='</div>';
-
-            prevProducto+='<div class="row">';
-            prevProducto+='<div class="col-md-3 imagenFix">';
-            if (valor.imagen=='NONE')
-                prevProducto+='<img alt="Sin Fotografía"/>';
-            else
-                prevProducto+='<img src="'+valor.imagen+'"/>';
-            prevProducto+='</div>';
-
-            prevProducto+='<div class="col-md-3">';
-            prevProducto+='<p>'+valor.descri+'</p>';
-            prevProducto+='</div>';
-            prevProducto+='</div>';
-
-            prevProducto+='</div>';
-            prevProducto+='<div class="row espaciador">';
-            prevProducto+='</div>';
-
-            $(prevProducto).appendTo('#listado');
-        });
-
-    },function(objetoError){
-        console.log('Error de lectura:'+objetoError.code);
-    });
-=======
     
 })();
+*/
+
 //fin de crud
->>>>>>> 811ff3b8074d751e7ae93d9a66886e41645b9ed0
 
