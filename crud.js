@@ -49,7 +49,7 @@ db.collection("usuarios").get().then(function(querySnapshot) {
 }
 
 
-//mostrar juegos
+//mostrar juegos hecho por cata
 var tabla = document.getElementById('tabla');
 function verJuegos(){
     db.collection("juegos").get().then(function(querySnapshot) {
@@ -59,9 +59,9 @@ function verJuegos(){
             console.log(doc.id, " => ",doc.data().costo+" - "+ doc.data().descri + "-" + doc.data().nombre + "-" + doc.data().plataforma);
             tabla.innerHTML +=  `
             <tr>
-                <th scope="row">${doc.data().costo}</th>
+                <th scope="row">${doc.data().nombre}</th>
                 <td>${doc.data().descri}</td>
-                <td>${doc.data().nombre}</td>
+                <td>$${doc.data().costo}</td>
                 <td>${doc.data().plataforma}</td>
             </tr> 
             `
